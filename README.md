@@ -7,7 +7,9 @@ struct TestStruct {
   int f2;
 };
 
+
 soa::vector<TestStruct> test_structs;
+
 test_structs.push_back({1, 2});
 
 test_structs[0].x = 3;
@@ -16,14 +18,19 @@ test_structs[0].x = 3;
 // under the hood using an SoA layout.
 
 #Requirements:
+
 - gcc 16
 - CMake
 - Ninja
 
 
 #Build:
+
 cmake --preset debug
+
 cmake --build --preset debug
 
+
 #Run example:
+
 ./build/debug/soa_test
