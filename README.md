@@ -1,38 +1,39 @@
-Basic library using C++26 reflection to make AoS-like abstraction over SoA layout. Only happy path supported.
+### Basic library using C++26 reflection to provide an AoS-like interface over SoA storage. Only the happy path is currently supported.
 
-#Example Usage:
+## Example
 
 ```cpp
-struct TestStruct {
-  int f1;
-  int f2;
-};
+#include <soa/soa_vector.hpp>
 
+struct TestStruct {
+    int f1;
+    int f2;
+};
 
 soa::vector<TestStruct> test_structs;
 
 test_structs.push_back({1, 2});
 
-test_structs[0].x = 3;
+test_structs[0].f1 = 3;
 
-// Reflection allows us to write AoS-like code like this, while 
-// under the hood using an SoA layout.
+// AoS-like access with SoA storage under the hood
 ```
 
-#Requirements:
+## Requirements
 
-- gcc 16
-- CMake
-- Ninja
+* GCC 16
+* CMake
+* Ninja
 
+## Build
 
-#Build:
-
+```sh
 cmake --preset debug
-
 cmake --build --preset debug
+```
 
+## Run
 
-#Run example:
-
+```sh
 ./build/debug/soa_test
+```
