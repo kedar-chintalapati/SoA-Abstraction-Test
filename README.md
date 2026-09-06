@@ -1,4 +1,4 @@
-### Basic library using C++26 reflection to provide an AoS-like interface over SoA storage. Only the happy path is currently supported.
+### Basic library using C++26 reflection to provide an AoS-like interface over SoA storage. Only the happy path is supported
 
 ## Example
 
