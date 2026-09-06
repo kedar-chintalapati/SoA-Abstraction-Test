@@ -2,6 +2,7 @@ Basic library using C++26 reflection to make AoS-like abstraction over SoA layou
 
 #Example Usage:
 
+```cpp
 struct TestStruct {
   int f1;
   int f2;
@@ -16,6 +17,7 @@ test_structs[0].x = 3;
 
 // Reflection allows us to write AoS-like code like this, while 
 // under the hood using an SoA layout.
+```
 
 #Requirements:
 
